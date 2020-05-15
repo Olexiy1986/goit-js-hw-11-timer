@@ -8,14 +8,14 @@ const refs = {
   timer: document.querySelector('#timer-1'),
 };
 
-const targetDate = new Date('June 01, 2020').getTime();
+const targetDate = new Date('June 01, 2021').getTime();
 
 const intervalId = setInterval(function () {
   const realDate = Date.now();
 
   const time = targetDate - realDate;
 
-  const days = pad(Math.floor(time / (1000 * 60 * 60 * 24)));
+  const days = Math.floor(time / (1000 * 60 * 60 * 24));
   const hours = pad(
     Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
   );
